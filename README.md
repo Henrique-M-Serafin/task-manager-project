@@ -1,69 +1,40 @@
-# React + TypeScript + Vite
+# 📋 Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um gerenciador de tarefas simples e eficiente, desenvolvido com **React**, **TypeScript**, **Vite**, **Shadcn/UI** e **TailwindCSS**.  
+O projeto é **totalmente responsivo** e armazena as tarefas no **LocalStorage** para manter a persistência dos dados, mesmo após fechar ou recarregar a página.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+- ➕ **Adicionar tarefas** através do botão **Add Task**
+- ✅ **Marcar tarefas como concluídas**
+- 💾 **Persistência de dados** usando LocalStorage
+- 📱 **Layout responsivo** para dispositivos móveis
+- 🧹 **Interface limpa e moderna** com Shadcn/UI + TailwindCSS
+- 📄 *(Em desenvolvimento)* **Exportar tarefas em PDF**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Tecnologias Utilizadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) para build e desenvolvimento rápido
+- [TailwindCSS](https://tailwindcss.com/) para estilização
+- [Shadcn/UI](https://ui.shadcn.com/) para componentes de interface
+- **LocalStorage API** para persistência dos dados no navegador
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+<!-- ## 📸 Demonstração
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+*(Adicione um print ou gif do projeto rodando)*  
+![Preview do Task Manager](./screenshot.png)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+--- -->
+
+## 📦 Como executar o projeto
+
+### 1️⃣ Clonar o repositório
+```bash
+git clone https://github.com/SEU-USUARIO/task-manager.git
