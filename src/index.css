@@ -1,0 +1,191 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Variante para dark mode */
+@custom-variant dark (&:is(.dark *));
+
+/* Integração com Tailwind Theme API */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* ===== 🎨 Paleta personalizada ===== */
+:root {
+  /* Escalas Roxo */
+  --purple-1: oklch(0.916 0.057 289.43);
+  --purple-2: oklch(0.817 0.113 289.43);
+  --purple-3: oklch(0.704 0.170 289.43);
+  --purple-4: oklch(0.598 0.244 289.43);
+  --purple-5: oklch(0.463 0.223 289.43);
+  --purple-6: oklch(0.310 0.149 289.43);
+  --purple-7: oklch(0.170 0.082 289.43);
+
+    /* Escalas Amarelo - Pastel */
+    --yellow-1: oklch(0.916 0.057 97.46);
+    --yellow-2: oklch(0.817 0.113 97.46);
+    --yellow-3: oklch(0.704 0.170 97.46);
+    --yellow-4: oklch(0.598 0.244 97.46);
+    --yellow-5: oklch(0.463 0.223 97.46);
+    --yellow-6: oklch(0.310 0.149 97.46);
+    --yellow-7: oklch(0.170 0.082 97.46);
+
+    /* Escalas Verde - Pastel */
+    --green-1: oklch(0.916 0.057 142.43);
+    --green-2: oklch(0.817 0.113 142.43);
+    --green-3: oklch(0.704 0.170 142.43);
+    --green-4: oklch(0.598 0.244 142.43);
+    --green-5: oklch(0.463 0.223 142.43);
+    --green-6: oklch(0.310 0.149 142.43);
+    --green-7: oklch(0.170 0.082 142.43);
+
+  /* Escalas Cinza */
+  --gray-1: oklch(0.927 0.003 283.6);
+  --gray-2: oklch(0.811 0.004 283.6);
+  --gray-3: oklch(0.667 0.005 283.6);
+  --gray-4: oklch(0.529 0.007 283.6);
+  --gray-5: oklch(0.395 0.006 283.6);
+  --gray-6: oklch(0.264 0.004 283.6);
+  --gray-7: oklch(0.126 0.000 0);
+
+  /* 🎯 Mapeamento para Tailwind/Shadcn */
+  --radius: 0.625rem;
+
+  --background: var(--gray-1);
+  --foreground: var(--gray-7);
+
+  --card: var(--gray-1);
+  --card-foreground: var(--gray-7);
+
+  --popover: var(--gray-1);
+  --popover-foreground: var(--gray-7);
+
+  --primary: var(--purple-4);
+  --primary-foreground: white;
+
+  --secondary: var(--yellow-2);
+  --secondary-foreground: black;
+
+  --success: var(--green-3);
+  --success-foreground: white;
+
+  --muted: var(--gray-2);
+  --muted-foreground: var(--gray-6);
+
+  --accent: var(--purple-2);
+  --accent-foreground: var(--gray-7);
+
+  --destructive: oklch(0.577 0.245 27.325); /* vermelho padrão */
+  --border: var(--gray-3);
+  --input: var(--gray-3);
+  --ring: var(--purple-3);
+
+  /* Charts e Sidebar podem usar tons da paleta */
+  --chart-1: var(--purple-4);
+  --chart-2: var(--yellow-3);
+  --chart-3: var(--green-3);
+  --chart-4: var(--purple-5);
+  --chart-5: var(--yellow-4);
+
+  --sidebar: var(--gray-1);
+  --sidebar-foreground: var(--gray-7);
+  --sidebar-primary: var(--purple-4);
+  --sidebar-primary-foreground: white;
+  --sidebar-accent: var(--purple-2);
+  --sidebar-accent-foreground: var(--gray-7);
+  --sidebar-border: var(--gray-3);
+  --sidebar-ring: var(--purple-3);
+}
+
+/* ===== 🎨 Tema Dark ===== */
+.dark {
+  --background: var(--gray-7);
+  --foreground: var(--gray-1);
+
+  --card: var(--gray-6);
+  --card-foreground: var(--gray-1);
+
+  --popover: var(--gray-6);
+  --popover-foreground: var(--gray-1);
+
+  --primary: var(--purple-3);
+  --primary-foreground: white;
+
+  --secondary: var(--yellow-3);
+  --secondary-foreground: black;
+
+  --success: var(--green-2);
+  --success-foreground: black;
+
+  --muted: var(--gray-5);
+  --muted-foreground: var(--gray-2);
+
+  --accent: var(--purple-5);
+  --accent-foreground: var(--gray-1);
+
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: var(--gray-5);
+  --input: var(--gray-5);
+  --ring: var(--purple-2);
+
+  --chart-1: var(--purple-3);
+  --chart-2: var(--yellow-4);
+  --chart-3: var(--green-2);
+  --chart-4: var(--purple-6);
+  --chart-5: var(--yellow-5);
+
+  --sidebar: var(--gray-7);
+  --sidebar-foreground: var(--gray-1);
+  --sidebar-primary: var(--purple-3);
+  --sidebar-primary-foreground: white;
+  --sidebar-accent: var(--purple-5);
+  --sidebar-accent-foreground: var(--gray-1);
+  --sidebar-border: var(--gray-5);
+  --sidebar-ring: var(--purple-2);
+}
+
+/* ===== Estilos Base ===== */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
