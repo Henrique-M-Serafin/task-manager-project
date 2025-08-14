@@ -10,6 +10,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: '/task-manager-project',
    resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
