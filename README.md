@@ -38,3 +38,9 @@ O projeto é **totalmente responsivo** e armazena as tarefas no **LocalStorage**
 ### 1️⃣ Clonar o repositório
 ```bash
 git clone https://github.com/SEU-USUARIO/task-manager.git
+
+### OU
+
+### 2️⃣ Acessar no GitHub Pages
+
+https://henrique-m-serafin.github.io/task-manager-project/
